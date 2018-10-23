@@ -1,5 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
-import { updateObject } from '../utlity';
+import { updateObject } from '../../shared/utlity';
 
 const initialState = {
   orders: [],
