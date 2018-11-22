@@ -26,8 +26,6 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk, sagaMiddleware)));
 
-sagaMiddleware.run(watchAuth);
-
 const app = (
   <Provider store={store}>
     <BrowserRouter>
@@ -35,6 +33,10 @@ const app = (
     </BrowserRouter>
   </Provider>
 );
+
+sagaMiddleware.run(watchAuth);
+
+
 
 ReactDOM.render(app, document.getElementById('root'));
 
